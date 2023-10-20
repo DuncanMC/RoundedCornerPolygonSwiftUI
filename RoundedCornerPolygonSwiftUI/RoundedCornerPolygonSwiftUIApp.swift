@@ -11,7 +11,11 @@ import SwiftUI
 struct RoundedCornerPolygonSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(cornerRadius: 30,
+                        controlPoints: roundedRectCorners(
+                          rect: CGRect(x: 100, y: 100, width: 200, height: 200),
+                          byRoundingCorners: .allCorners,
+                          cornerRadius: 30))
         }
     }
 }
